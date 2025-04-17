@@ -60,25 +60,38 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     IRETURN
 
   public static func_1(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     ICONST_0
+   L1
     BIPUSH 8
+   L2
     ICONST_0
     ALOAD 0
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.memoryWriteInt (IIILcom/dylibso/chicory/runtime/Memory;)V
+   L3
     ICONST_4
+   L4
     BIPUSH 12
+   L5
     ICONST_0
     ALOAD 0
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.memoryWriteInt (IIILcom/dylibso/chicory/runtime/Memory;)V
+   L6
     ICONST_1
+   L7
     ICONST_0
+   L8
     ICONST_1
+   L9
     BIPUSH 20
+   L10
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
     ALOAD 0
     ALOAD 1
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine.func_0 (IIIILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I
+   L11
     POP
+   L12
     RETURN
 
   public static call_indirect_0(IIIIIILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I

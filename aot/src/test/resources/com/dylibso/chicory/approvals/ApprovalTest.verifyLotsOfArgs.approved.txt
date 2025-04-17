@@ -29,306 +29,607 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     ATHROW
 
   public static func_0(IILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I
+   L0
     ILOAD 0
+   L1
     LCONST_0
+   L2
     FCONST_0
+   L3
     DCONST_0
+   L4
     ICONST_M1
+   L5
     ICONST_M1
+   L6
     ICONST_0
+   L7
     ICONST_0
+   L8
     ICONST_0
+   L9
     ICONST_0
+   L10
     ICONST_0
+   L11
     ICONST_0
+   L12
     ICONST_0
+   L13
     ICONST_0
+   L14
     ICONST_0
+   L15
     ICONST_0
+   L16
     ICONST_0
+   L17
     ICONST_0
+   L18
     ICONST_0
+   L19
     ICONST_0
+   L20
     ICONST_0
+   L21
     ICONST_0
+   L22
     ICONST_0
+   L23
     ICONST_0
+   L24
     ICONST_0
+   L25
     ICONST_0
+   L26
     ICONST_0
+   L27
     ICONST_0
+   L28
     ICONST_0
+   L29
     ICONST_0
+   L30
     ICONST_0
+   L31
     ICONST_0
+   L32
     ICONST_0
+   L33
     ICONST_0
+   L34
     ICONST_0
+   L35
     ICONST_0
+   L36
     ICONST_0
+   L37
     ICONST_0
+   L38
     ICONST_0
+   L39
     ICONST_0
+   L40
     ICONST_0
+   L41
     ICONST_0
+   L42
     ICONST_0
+   L43
     ICONST_0
+   L44
     ICONST_0
+   L45
     ICONST_0
+   L46
     ICONST_0
+   L47
     ICONST_0
+   L48
     ICONST_0
+   L49
     ICONST_0
+   L50
     ICONST_0
+   L51
     ICONST_0
+   L52
     ICONST_0
+   L53
     ICONST_0
+   L54
     ICONST_0
+   L55
     ICONST_0
+   L56
     ICONST_0
+   L57
     ICONST_0
+   L58
     ICONST_0
+   L59
     ICONST_0
+   L60
     ICONST_0
+   L61
     ICONST_0
+   L62
     ICONST_0
+   L63
     ICONST_0
+   L64
     ICONST_0
+   L65
     ICONST_0
+   L66
     ICONST_0
+   L67
     ICONST_0
+   L68
     ICONST_0
+   L69
     ICONST_0
+   L70
     ICONST_0
+   L71
     ICONST_0
+   L72
     ICONST_0
+   L73
     ICONST_0
+   L74
     ICONST_0
+   L75
     ICONST_0
+   L76
     ICONST_0
+   L77
     ICONST_0
+   L78
     ICONST_0
+   L79
     ICONST_0
+   L80
     ICONST_0
+   L81
     ICONST_0
+   L82
     ICONST_0
+   L83
     ICONST_0
+   L84
     ICONST_0
+   L85
     ICONST_0
+   L86
     ICONST_0
+   L87
     ICONST_0
+   L88
     ICONST_0
+   L89
     ICONST_0
+   L90
     ICONST_0
+   L91
     ICONST_0
+   L92
     ICONST_0
+   L93
     ICONST_0
+   L94
     ICONST_0
+   L95
     ICONST_0
+   L96
     ICONST_0
+   L97
     ICONST_0
+   L98
     ICONST_0
+   L99
     ICONST_0
+   L100
     ICONST_0
+   L101
     ICONST_0
+   L102
     ICONST_0
+   L103
     ICONST_0
+   L104
     ICONST_0
+   L105
     ICONST_0
+   L106
     ICONST_0
+   L107
     ICONST_0
+   L108
     ICONST_0
+   L109
     ICONST_0
+   L110
     ICONST_0
+   L111
     ICONST_0
+   L112
     ICONST_0
+   L113
     ICONST_0
+   L114
     ICONST_0
+   L115
     ICONST_0
+   L116
     ICONST_0
+   L117
     ICONST_0
+   L118
     ICONST_0
+   L119
     ICONST_0
+   L120
     ICONST_0
+   L121
     ICONST_0
+   L122
     ICONST_0
+   L123
     ICONST_0
+   L124
     ICONST_0
+   L125
     ICONST_0
+   L126
     ICONST_0
+   L127
     ICONST_0
+   L128
     ICONST_0
+   L129
     ICONST_0
+   L130
     ICONST_0
+   L131
     ICONST_0
+   L132
     ICONST_0
+   L133
     ICONST_0
+   L134
     ICONST_0
+   L135
     ICONST_0
+   L136
     ICONST_0
+   L137
     ICONST_0
+   L138
     ICONST_0
+   L139
     ICONST_0
+   L140
     ICONST_0
+   L141
     ICONST_0
+   L142
     ICONST_0
+   L143
     ICONST_0
+   L144
     ICONST_0
+   L145
     ICONST_0
+   L146
     ICONST_0
+   L147
     ICONST_0
+   L148
     ICONST_0
+   L149
     ICONST_0
+   L150
     ICONST_0
+   L151
     ICONST_0
+   L152
     ICONST_0
+   L153
     ICONST_0
+   L154
     ICONST_0
+   L155
     ICONST_0
+   L156
     ICONST_0
+   L157
     ICONST_0
+   L158
     ICONST_0
+   L159
     ICONST_0
+   L160
     ICONST_0
+   L161
     ICONST_0
+   L162
     ICONST_0
+   L163
     ICONST_0
+   L164
     ICONST_0
+   L165
     ICONST_0
+   L166
     ICONST_0
+   L167
     ICONST_0
+   L168
     ICONST_0
+   L169
     ICONST_0
+   L170
     ICONST_0
+   L171
     ICONST_0
+   L172
     ICONST_0
+   L173
     ICONST_0
+   L174
     ICONST_0
+   L175
     ICONST_0
+   L176
     ICONST_0
+   L177
     ICONST_0
+   L178
     ICONST_0
+   L179
     ICONST_0
+   L180
     ICONST_0
+   L181
     ICONST_0
+   L182
     ICONST_0
+   L183
     ICONST_0
+   L184
     ICONST_0
+   L185
     ICONST_0
+   L186
     ICONST_0
+   L187
     ICONST_0
+   L188
     ICONST_0
+   L189
     ICONST_0
+   L190
     ICONST_0
+   L191
     ICONST_0
+   L192
     ICONST_0
+   L193
     ICONST_0
+   L194
     ICONST_0
+   L195
     ICONST_0
+   L196
     ICONST_0
+   L197
     ICONST_0
+   L198
     ICONST_0
+   L199
     ICONST_0
+   L200
     ICONST_0
+   L201
     ICONST_0
+   L202
     ICONST_0
+   L203
     ICONST_0
+   L204
     ICONST_0
+   L205
     ICONST_0
+   L206
     ICONST_0
+   L207
     ICONST_0
+   L208
     ICONST_0
+   L209
     ICONST_0
+   L210
     ICONST_0
+   L211
     ICONST_0
+   L212
     ICONST_0
+   L213
     ICONST_0
+   L214
     ICONST_0
+   L215
     ICONST_0
+   L216
     ICONST_0
+   L217
     ICONST_0
+   L218
     ICONST_0
+   L219
     ICONST_0
+   L220
     ICONST_0
+   L221
     ICONST_0
+   L222
     ICONST_0
+   L223
     ICONST_0
+   L224
     ICONST_0
+   L225
     ICONST_0
+   L226
     ICONST_0
+   L227
     ICONST_0
+   L228
     ICONST_0
+   L229
     ICONST_0
+   L230
     ICONST_0
+   L231
     ICONST_0
+   L232
     ICONST_0
+   L233
     ICONST_0
+   L234
     ICONST_0
+   L235
     ICONST_0
+   L236
     ICONST_0
+   L237
     ICONST_0
+   L238
     ICONST_0
+   L239
     ICONST_0
+   L240
     ICONST_0
+   L241
     ICONST_0
+   L242
     ICONST_0
+   L243
     ICONST_0
+   L244
     ICONST_0
+   L245
     ICONST_0
+   L246
     ICONST_0
+   L247
     ICONST_0
+   L248
     ICONST_0
+   L249
     ICONST_0
+   L250
     ICONST_0
+   L251
     ICONST_0
+   L252
     ICONST_0
+   L253
     ICONST_0
+   L254
     ICONST_0
+   L255
     ICONST_0
+   L256
     ICONST_0
+   L257
     ICONST_0
+   L258
     ICONST_0
+   L259
     ICONST_0
+   L260
     ICONST_0
+   L261
     ICONST_0
+   L262
     ICONST_0
+   L263
     ICONST_0
+   L264
     ICONST_0
+   L265
     ICONST_0
+   L266
     ICONST_0
+   L267
     ICONST_0
+   L268
     ICONST_0
+   L269
     ICONST_0
+   L270
     ICONST_0
+   L271
     ICONST_0
+   L272
     ICONST_0
+   L273
     ICONST_0
+   L274
     ICONST_0
+   L275
     ICONST_0
+   L276
     ICONST_0
+   L277
     ICONST_0
+   L278
     ICONST_0
+   L279
     ICONST_0
+   L280
     ICONST_0
+   L281
     ICONST_0
+   L282
     ICONST_0
+   L283
     ICONST_0
+   L284
     ICONST_0
+   L285
     ICONST_0
+   L286
     ICONST_0
+   L287
     ICONST_0
+   L288
     ICONST_0
+   L289
     ICONST_0
+   L290
     ICONST_0
+   L291
     ICONST_0
+   L292
     ICONST_0
+   L293
     ICONST_0
+   L294
     ICONST_0
+   L295
     ICONST_0
+   L296
     ICONST_0
+   L297
     ICONST_0
+   L298
     ICONST_0
+   L299
     ILOAD 1
+   L300
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
     ISTORE 305
     ISTORE 304
@@ -2134,6 +2435,7 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     ALOAD 2
     ALOAD 3
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine.func_1 ([JLcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I
+   L301
     IRETURN
 
   public static func_1([JLcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I
@@ -3636,9 +3938,13 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     LALOAD
     L2I
     ISTORE 304
+   L0
     ILOAD 3
+   L1
     ILOAD 304
+   L2
     IADD
+   L3
     IRETURN
 
   public static call_indirect_0(IIIILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I

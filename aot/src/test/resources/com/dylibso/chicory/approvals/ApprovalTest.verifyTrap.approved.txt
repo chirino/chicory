@@ -29,23 +29,28 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     ATHROW
 
   public static func_0(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.throwTrapException ()Ljava/lang/RuntimeException;
     ATHROW
-   L0
+   L1
     ATHROW
 
   public static func_1(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
     ALOAD 0
     ALOAD 1
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine.func_0 (Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L1
     RETURN
 
   public static func_2(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
     ALOAD 0
     ALOAD 1
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine.func_1 (Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L1
     RETURN
 
   public static call_indirect_0(IILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V

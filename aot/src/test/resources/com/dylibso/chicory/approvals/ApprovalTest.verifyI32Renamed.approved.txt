@@ -29,34 +29,63 @@ public final class FOO implements com/dylibso/chicory/runtime/Machine {
     ATHROW
 
   public static func_0(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     LDC -2147483648
+   L1
     POP
+   L2
     ICONST_0
+   L3
     POP
+   L4
     LDC 2147483647
+   L5
     POP
+   L6
     LDC -9223372036854775808L
+   L7
     POP2
+   L8
     LCONST_0
+   L9
     POP2
+   L10
     LDC 9223372036854775807L
+   L11
     POP2
+   L12
     LDC -2147483647
+   L13
     POP
+   L14
     LDC 2147483646
+   L15
     POP
+   L16
     LDC -9223372036854775807L
+   L17
     POP2
+   L18
     LDC 9223372036854775806L
+   L19
     POP2
+   L20
     ICONST_M1
+   L21
     POP
+   L22
     ICONST_1
+   L23
     POP
+   L24
     LDC -1L
+   L25
     POP2
+   L26
     LCONST_1
+   L27
     POP2
+   L28
     RETURN
 
   public static call_indirect_0(IILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V

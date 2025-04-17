@@ -29,10 +29,15 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     ATHROW
 
   public static func_0(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     LDC 0.12345678F
+   L1
     LDC 0.123456789012345D
+   L2
     POP2
+   L3
     POP
+   L4
     RETURN
 
   public static call_indirect_0(IILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V

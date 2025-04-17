@@ -746,6 +746,12 @@ public final class AotCompiler {
 
         // compile the function body
         for (AotInstruction ins : instructions) {
+            if (ins.lineNo() >= 0) {
+                Label label = new Label();
+                asm.mark(label);
+                asm.visitLineNumber(ins.lineNo(), label);
+            }
+
             switch (ins.opcode()) {
                 case LABEL:
                     Label label = labels.get(ins.operand(0));

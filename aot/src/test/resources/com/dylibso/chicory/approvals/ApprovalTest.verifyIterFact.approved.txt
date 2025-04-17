@@ -31,27 +31,43 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
   public static func_0(ILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I
     ICONST_0
     ISTORE 3
+   L0
     ICONST_1
-    ISTORE 3
-    ILOAD 0
-    INVOKESTATIC com/dylibso/chicory/runtime/OpcodeImpl.I32_EQZ (I)I
-    IFNE L0
    L1
-    ILOAD 3
-    ILOAD 0
-    IMUL
     ISTORE 3
+   L2
     ILOAD 0
+   L3
+    INVOKESTATIC com/dylibso/chicory/runtime/OpcodeImpl.I32_EQZ (I)I
+   L4
+    IFNE L5
+   L6
+    ILOAD 3
+   L7
+    ILOAD 0
+   L8
+    IMUL
+   L9
+    ISTORE 3
+   L10
+    ILOAD 0
+   L11
     ICONST_M1
+   L12
     IADD
+   L13
     DUP
     ISTORE 0
+   L14
     INVOKESTATIC com/dylibso/chicory/runtime/OpcodeImpl.I32_EQZ (I)I
-    IFNE L0
+   L15
+    IFNE L5
+   L16
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
-    GOTO L1
-   L0
+    GOTO L6
+   L5
     ILOAD 3
+   L17
     IRETURN
 
   public static call_indirect_0(IIILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)I

@@ -6,20 +6,26 @@ import java.util.stream.LongStream;
 final class AotInstruction {
     public static final long[] EMPTY = new long[0];
 
+    private final int lineNo;
     private final AotOpCode opcode;
     private final long[] operands;
 
-    public AotInstruction(AotOpCode opcode) {
-        this(opcode, EMPTY);
+    public AotInstruction(int lineNo, AotOpCode opcode) {
+        this(lineNo, opcode, EMPTY);
     }
 
-    public AotInstruction(AotOpCode opcode, long operand) {
-        this(opcode, new long[] {operand});
+    public AotInstruction(int lineNo, AotOpCode opcode, long operand) {
+        this(lineNo, opcode, new long[] {operand});
     }
 
-    public AotInstruction(AotOpCode opcode, long[] operands) {
+    public AotInstruction(int lineNo, AotOpCode opcode, long[] operands) {
+        this.lineNo = lineNo;
         this.opcode = opcode;
         this.operands = operands;
+    }
+
+    public int lineNo() {
+        return lineNo;
     }
 
     public AotOpCode opcode() {

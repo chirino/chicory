@@ -42,11 +42,14 @@ public final class com/dylibso/chicory/$gen/CompiledMachine implements com/dylib
     RETURN
 
   public static func_1(Lcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L0
     BIPUSH 42
+   L1
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine$AotMethods.checkInterruption ()V
     ALOAD 0
     ALOAD 1
     INVOKESTATIC com/dylibso/chicory/$gen/CompiledMachine.func_0 (ILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
+   L2
     RETURN
 
   public static call_indirect_0(IIILcom/dylibso/chicory/runtime/Memory;Lcom/dylibso/chicory/runtime/Instance;)V
