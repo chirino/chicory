@@ -12,6 +12,7 @@ import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
+import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -31,6 +32,7 @@ public class BenchmarkWat2Wasm {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
+    @Threads(8)
     public void benchmarkAot(Blackhole bh) {
         bh.consume(Wat2Wasm.parse(wat));
     }
