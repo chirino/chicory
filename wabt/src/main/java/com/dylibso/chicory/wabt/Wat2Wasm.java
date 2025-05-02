@@ -6,6 +6,7 @@ import com.dylibso.chicory.log.Logger;
 import com.dylibso.chicory.log.SystemLogger;
 import com.dylibso.chicory.runtime.ImportValues;
 import com.dylibso.chicory.runtime.Instance;
+import com.dylibso.chicory.wasi.WasiExitException;
 import com.dylibso.chicory.wasi.WasiOptions;
 import com.dylibso.chicory.wasi.WasiPreview1;
 import com.dylibso.chicory.wasm.WasmModule;
@@ -79,6 +80,10 @@ public final class Wat2Wasm {
                             .withMachineFactory(Wat2WasmModule::create)
                             .withImportValues(imports)
                             .build();
+                } catch (WasiExitException e) {
+                    e.addSuppressed(
+                            new StdErrorDetails(stderrStream.toString(StandardCharsets.UTF_8)));
+                    throw e;
                 }
 
                 return stdoutStream.toByteArray();

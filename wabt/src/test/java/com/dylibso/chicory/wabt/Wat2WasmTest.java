@@ -4,13 +4,16 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import com.dylibso.chicory.corpus.WatGenerator;
 import com.dylibso.chicory.runtime.Instance;
 import com.dylibso.chicory.wasi.WasiExitException;
 import com.dylibso.chicory.wasm.Parser;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
 import org.junit.jupiter.api.Test;
 
 public class Wat2WasmTest {
@@ -64,5 +67,24 @@ public class Wat2WasmTest {
     public void canCompileBigFunctions() throws IOException {
         String wat = WatGenerator.bigWat(10, 15_000);
         Wat2Wasm.parse(wat);
+    }
+
+    @Test
+    public void invalidWat() {
+
+        try {
+            Wat2Wasm.parse(
+                    "(module (fun (export \"add\") (param $x"
+                            + " i32) (param $y i32) (result i32)"
+                            + " (i32.add (local.get $x) (local.get"
+                            + " $y))))");
+            fail("expected WasiExitException");
+        } catch (WasiExitException e) {
+            // veryify the
+            var baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            String error = baos.toString(UTF_8);
+            assertTrue(error.contains("unexpected token \"fun\", expected a module field"));
+        }
     }
 }
