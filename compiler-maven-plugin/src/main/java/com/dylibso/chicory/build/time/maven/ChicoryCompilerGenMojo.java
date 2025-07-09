@@ -92,8 +92,8 @@ public class ChicoryCompilerGenMojo extends AbstractMojo {
         var generator = new Generator(config);
 
         try {
-            var finalInterpretedFunctions = generator.generateResources();
-            generator.generateMetaWasm(finalInterpretedFunctions);
+            var result = generator.generateResources();
+            generator.generateMetaWasm(result);
             generator.generateSources();
         } catch (IOException e) {
             throw new MojoExecutionException("Failed to generate resources", e);

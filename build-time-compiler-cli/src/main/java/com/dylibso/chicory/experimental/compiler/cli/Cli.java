@@ -87,8 +87,8 @@ public class Cli implements Runnable {
         var generator = new Generator(config);
 
         try {
-            var interpretedFunctions = generator.generateResources();
-            generator.generateMetaWasm(interpretedFunctions);
+            var result = generator.generateResources();
+            generator.generateMetaWasm(result);
             generator.generateSources();
         } catch (IOException e) {
             throw new CommandLine.PicocliException("Failed to execute the command", e);

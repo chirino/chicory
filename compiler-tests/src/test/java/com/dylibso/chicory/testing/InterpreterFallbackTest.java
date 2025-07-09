@@ -68,8 +68,8 @@ public class InterpreterFallbackTest {
 
     private void generateAll(Generator generator) throws IOException {
         generator.generateSources();
-        var interpretedFunctions = generator.generateResources();
-        generator.generateMetaWasm(interpretedFunctions);
+        var result = generator.generateResources();
+        generator.generateMetaWasm(result);
     }
 
     private String expectedMessageContent = "interpreter fallback mode: WASM function index: 2";

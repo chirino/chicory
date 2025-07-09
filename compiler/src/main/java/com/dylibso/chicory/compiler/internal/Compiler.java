@@ -214,7 +214,15 @@ public final class Compiler {
         Map<String, byte[]> classBytes = new LinkedHashMap<>();
         classBytes.put(className, bytes);
         classBytes.putAll(extraClasses);
-        return new CompilerResult(factory, classBytes, Set.copyOf(interpretedFunctions));
+
+        ArrayList<Integer> functionGroupOfFuncId = new ArrayList<>();
+
+        int totalFunctions = functionImports + module.functionSection().functionCount();
+        for (int funcId = 0; funcId < totalFunctions; funcId++) {
+            functionGroupOfFuncId.add(funcId / maxFunctionsPerClass);
+        }
+
+        return new CompilerResult(factory, classBytes, interpretedFunctions, functionGroupOfFuncId);
     }
 
     private Function<Instance, Machine> createMachineFactory(byte[] classBytes) {

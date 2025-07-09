@@ -6,6 +6,7 @@ import static com.github.javaparser.StaticJavaParser.parseClassOrInterfaceType;
 import static com.github.javaparser.StaticJavaParser.parseType;
 
 import com.dylibso.chicory.compiler.internal.Compiler;
+import com.dylibso.chicory.compiler.internal.CompilerResult;
 import com.dylibso.chicory.runtime.Instance;
 import com.dylibso.chicory.runtime.Machine;
 import com.dylibso.chicory.wasm.Parser;
@@ -14,6 +15,7 @@ import com.dylibso.chicory.wasm.WasmWriter;
 import com.dylibso.chicory.wasm.types.OpCode;
 import com.dylibso.chicory.wasm.types.RawSection;
 import com.dylibso.chicory.wasm.types.SectionId;
+import com.dylibso.chicory.wasm.types.UnknownCustomSection;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.NodeList;
@@ -49,7 +51,7 @@ public class Generator {
         this.config = config;
     }
 
-    public Set<Integer> generateResources() throws IOException {
+    public CompilerResult generateResources() throws IOException {
         var module = Parser.parse(config.wasmFile());
         var machineName = config.name() + "Machine";
         var compiler =
@@ -70,7 +72,7 @@ public class Generator {
             Files.write(targetFile, entry.getValue());
         }
 
-        return result.interpretedFunctions();
+        return result;
     }
 
     public void generateSources() throws IOException {
@@ -102,7 +104,8 @@ public class Generator {
         dest.saveAll();
     }
 
-    public void generateMetaWasm(Set<Integer> interpretedFunctions) throws IOException {
+    public void generateMetaWasm(CompilerResult compilerResult) throws IOException {
+        Set<Integer> interpretedFunctions = compilerResult.interpretedFunctions();
         byte[] wasmBytes = Files.readAllBytes(config.wasmFile());
         var module = Parser.builder().includeSectionId(SectionId.CODE).build().parse(wasmBytes);
 
@@ -155,6 +158,13 @@ public class Generator {
                         writer.writeSection((RawSection) section);
                     }
                 });
+
+        var out = new ByteArrayOutputStream();
+        writeVarUInt32(out, compilerResult.functionGroupOfFuncId().size());
+        for (var groupId : compilerResult.functionGroupOfFuncId()) {
+            writeVarUInt32(out, groupId);
+        }
+        writer.writeSection(new UnknownCustomSection("chicory-function-groups", out.toByteArray()));
 
         var newWasmFile =
                 config.targetWasmFolder()
