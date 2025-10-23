@@ -102,14 +102,7 @@ public final class LockStepMemory implements Memory {
             eventsOut.put(expected);
             Event actual = eventsIn.take();
             if (expected.eventId % 1_000_000 == 0) {
-                System.out.println(
-                        String.format(
-                                "%s: %s %d %s %s",
-                                name,
-                                expected.method,
-                                expected.eventId,
-                                expected.args,
-                                expected.result));
+                System.out.printf("processed %s event %d\n", name, expected.eventId);
             }
 
             if (!expected.equals(actual)) {
