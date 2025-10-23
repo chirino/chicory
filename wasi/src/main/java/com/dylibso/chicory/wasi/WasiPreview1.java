@@ -55,6 +55,7 @@ import java.nio.file.attribute.FileTime;
 import java.time.Clock;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -1021,9 +1022,29 @@ public final class WasiPreview1 implements Closeable {
             return wasiResult(WasiErrno.EIO);
         }
 
+        attributes = processFileAttributes(attributes);
         writeFileStat(memory, buf, attributes, getFileType(attributes));
 
         return wasiResult(WasiErrno.ESUCCESS);
+    }
+
+    private static final FileTime FIXED_FILE_TIME = FileTime.fromMillis(System.currentTimeMillis());
+
+    private Map<String, Object> processFileAttributes(Map<String, Object> x) {
+        var attributes = new HashMap<>(x);
+        if (attributes.containsKey("lastModifiedTime")) {
+            attributes.put("lastModifiedTime", FIXED_FILE_TIME);
+        }
+        if (attributes.containsKey("ctime")) {
+            attributes.put("ctime", FIXED_FILE_TIME);
+        }
+        if (attributes.containsKey("lastAccessTime")) {
+            attributes.put("lastAccessTime", FIXED_FILE_TIME);
+        }
+        if (attributes.containsKey("creationTime")) {
+            attributes.put("creationTime", FIXED_FILE_TIME);
+        }
+        return attributes;
     }
 
     @WasmExport
